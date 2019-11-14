@@ -1,0 +1,1 @@
+cat ORIGIN.STX | awk -F" : " '{print $2}' | awk -F"." '{print $1}' | sed 's/_/ /g' | while read line; do date -d"${line}" +"%Y %m %d %H %M %S"; done
